@@ -3,6 +3,7 @@ import { Box, Typography, Paper, Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CardNav from './components/Components/CardNav/CardNav'; 
 import logo from './assets/Subtract Logo2.svg';
+import logotext from './assets/Fluxi Text BB.svg';
 
 
 const WelcomeContainer = styled(Container)(({ theme }) => ({
@@ -32,35 +33,36 @@ const App: React.FC = () => {
 
 
   const items = [
-      {
-        label: "About",
-        bgColor: "#0D0716",
-        textColor: "#fff",
-        links: [
-          { label: "Company", ariaLabel: "About Company" },
-          { label: "Careers", ariaLabel: "About Careers" }
-        ]
-      },
-      {
-        label: "Projects", 
-        bgColor: "#170D27",
-        textColor: "#fff",
-        links: [
-          { label: "Featured", ariaLabel: "Featured Projects" },
-          { label: "Case Studies", ariaLabel: "Project Case Studies" }
-        ]
-      },
-      {
-        label: "Contact",
-        bgColor: "#271E37", 
-        textColor: "#fff",
-        links: [
-          { label: "Email", ariaLabel: "Email us" },
-          { label: "Twitter", ariaLabel: "Twitter" },
-          { label: "LinkedIn", ariaLabel: "LinkedIn" }
-        ]
-      }
-    ];
+    {
+      label: "About",
+      bgColor: "#0D0716",
+      textColor: "#fff",
+      links: [
+        { label: "Company", ariaLabel: "About Company", href: "/company" },
+        { label: "Careers", ariaLabel: "About Careers", href: "/careers" }
+      ]
+    },
+    {
+      label: "Projects",
+      bgColor: "#170D27",
+      textColor: "#fff",
+      links: [
+        { label: "Featured", ariaLabel: "Featured Projects", href: "/projects/featured" },
+        { label: "Case Studies", ariaLabel: "Project Case Studies", href: "/projects/case-studies" }
+      ]
+    },
+    {
+      label: "Contact",
+      bgColor: "#271E37",
+      textColor: "#fff",
+      links: [
+        { label: "Email", ariaLabel: "Email us", href: "mailto:info@example.com" },
+        { label: "Twitter", ariaLabel: "Twitter", href: "https://twitter.com/yourhandle" },
+        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://linkedin.com/company/yourcompany" }
+      ]
+    }
+  ];
+
 
   const [apiMsg, setApiMsg] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -129,22 +131,23 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
-    <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center">
 
       
-    </div>
+        <CardNav
+        logo={logotext}
+        logoAlt="Fluxi"
+        items={items}
+        className=""
 
-      <CardNav
-      logo={logo}
-      logoAlt="Company Logo"
-      items={items}
-      baseColor="#fff"
-      menuColor="#000"
-      buttonBgColor="#111"
-      buttonTextColor="#fff"
-      ease="power3.out"
-    />
+        baseColor="#fff"
+        menuColor="#000"
+        buttonBgColor="#111"
+        buttonTextColor="#fff"
+        ease="back.out(1.7)"
+      />
 
+      </div>
     </div>
   );
 };
