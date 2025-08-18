@@ -24,3 +24,9 @@
 - **Built-In Engagement Hooks**  
   
   Gamified progress, streak tracking, and interactive features keep motivation high and reinforce consistent study habits. However this is still a *maybe*.
+
+- **Seamless Integration & Expansion** 
+ 
+  Over time, the app connects with calendars, note-taking platforms, and voice assistants—becoming the ultimate AI study companion across devices.
+
+---
