@@ -93,34 +93,10 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100"> {/* Tailwind wrapper */}
-      
-      <nav className="flex justify-center p-6">
-        <ul className="flex space-x-6 bg-gray-900 text-white px-6 py-2 rounded-full">
-          <li>
-            <a href="#" className="px-4 py-2 rounded-full hover:bg-gray-700 transition">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#" className="px-4 py-2 rounded-full hover:bg-gray-700 transition">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#" className="px-4 py-2 rounded-full hover:bg-gray-700 transition">
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#" className="px-4 py-2 rounded-full hover:bg-gray-700 transition">
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+  
       
       <div
-        className="rounded-3xl bg-[#09173b]"
+        className="rounded-3xl bg-[#09173b] mx-auto mt-10 p-6 shadow-lg"
         style={{
           width: "min(120vw,max(70vw, 1600px))",
           height: "45vh"
