@@ -17,3 +17,6 @@
 
 - **Guided Actionability**  
   Each task unfolds as a clear, step-by-step journey: from planning to execution, with built-in study aids like auto-generated flashcards, quizzes, and reminders.
+
+- **Dynamic Adaptation**  
+  The system adapts in real time: reprioritizing missed tasks, balancing workloads, and breathing flexibility into students' evolving schedules. It intellegently tailors to the student's google calender to decide when to execute these plans.
