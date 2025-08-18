@@ -25,6 +25,8 @@ export interface PillNavProps {
   pillTextColor?: string;
   onMobileMenuClick?: () => void;
   initialLoadAnimation?: boolean;
+  border?: string;
+  borderThickness?: string;
 }
 
 const PillNav: React.FC<PillNavProps> = ({
@@ -40,6 +42,8 @@ const PillNav: React.FC<PillNavProps> = ({
   pillTextColor,
   onMobileMenuClick,
   initialLoadAnimation = true,
+  border = "#2962FF",
+  borderThickness = "2px",
 }) => {
   const resolvedPillTextColor = pillTextColor ?? baseColor;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -261,6 +265,8 @@ const PillNav: React.FC<PillNavProps> = ({
     ["--logo"]: "36px",
     ["--pill-pad-x"]: "18px",
     ["--pill-gap"]: "3px",
+    ["--border"]: border,
+    ["--border-thickness"]: borderThickness,
   } as React.CSSProperties;
 
   return (
@@ -284,6 +290,7 @@ const PillNav: React.FC<PillNavProps> = ({
               width: "var(--nav-h)",
               height: "var(--nav-h)",
               background: "var(--base, #000)",
+              border: "var(--border-thickness) solid var(--border)",
             }}
           >
             <img
@@ -323,6 +330,7 @@ const PillNav: React.FC<PillNavProps> = ({
           style={{
             height: "var(--nav-h)",
             background: "var(--base, #000)",
+            border: "var(--border-thickness) solid var(--border)",
           }}
         >
           <ul
@@ -345,7 +353,8 @@ const PillNav: React.FC<PillNavProps> = ({
                   <span
                     className="hover-circle absolute left-1/2 bottom-0 rounded-full z-[1] block pointer-events-none"
                     style={{
-                      background: "var(--base, #000)",
+                      background: "var(--border, #000)",
+                      border: "var(--border-thickness) solid var(--border)",
                       willChange: "transform",
                     }}
                     aria-hidden="true"

@@ -2,7 +2,7 @@
 import { Box, Typography, Paper, Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import PillNav from './components/Components/PillNav/PillNav'; 
-import logo from './assets/Logo.svg';
+import logo from './assets/Subtract Logo.png';
 
 
 const WelcomeContainer = styled(Container)(({ theme }) => ({
@@ -96,16 +96,29 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100"> {/* Tailwind wrapper */}
-  
+
+      <PillNav
+        logo={logo}
+        logoAlt="Company Logo"
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Why Us?', href: '/about' },
+          { label: 'About', href: '/services' },
+          
+        ]}
+        activeHref="/"
+        className=""
+        ease="power2.easeInOut"
+        baseColor="#ffffff"
+        pillColor="#ffffff"
+        hoveredPillTextColor="#ffffff"
+        pillTextColor="#2962FF"
+        
+      />
+
+
+
       
-      <div
-        className="rounded-3xl bg-[#09173b] mx-auto mt-10 p-6 shadow-lg"
-        style={{
-          width: "min(120vw,max(70vw, 1600px))",
-          height: "45vh"
-        }}
-      >
-      </div>
 
 
     </div>
