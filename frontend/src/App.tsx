@@ -2,7 +2,7 @@
 import { Box, Typography, Paper, Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import PillNav from './components/Components/PillNav/PillNav'; 
-import logo from './assets/Subtract Logo.png';
+import logo from './assets/Subtract Logo2.svg';
 
 
 const WelcomeContainer = styled(Container)(({ theme }) => ({
@@ -96,6 +96,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100"> {/* Tailwind wrapper */}
+    <div className="flex justify-center items-center h-64">
 
       <PillNav
         logo={logo}
@@ -107,15 +108,15 @@ const App: React.FC = () => {
           
         ]}
         activeHref="/"
-        className=""
-        ease="power2.easeInOut"
+        className="scale-125"
+        ease="power1.inOut"
         baseColor="#ffffff"
         pillColor="#ffffff"
         hoveredPillTextColor="#ffffff"
         pillTextColor="#2962FF"
         
       />
-
+    </div>
 
 
       

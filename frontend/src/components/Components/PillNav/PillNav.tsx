@@ -354,7 +354,7 @@ const PillNav: React.FC<PillNavProps> = ({
                     className="hover-circle absolute left-1/2 bottom-0 rounded-full z-[1] block pointer-events-none"
                     style={{
                       background: "var(--border, #000)",
-                      border: "var(--border-thickness) solid var(--border)",
+                      border: "var(--border-thickness) solid var(--base)",
                       willChange: "transform",
                     }}
                     aria-hidden="true"
