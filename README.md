@@ -34,3 +34,4 @@
 ## Why this vision works
 
 - **Concise and Memorable** – It’s a powerful, single-sentence statement that clearly communicates the product’s aspirational future.  
+- **Customer-Centric and Future-Oriented** – It centers on students’ experience and imagines a transformed, organized learning journey. :contentReference[oaicite:1]{index=1}  
