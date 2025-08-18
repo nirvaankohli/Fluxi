@@ -12,3 +12,5 @@
 
 **How students experience success in the future with our app:**
 
+- **Unified Planning and Learning**  
+  The app intelligently transforms varied inputs—from vague goals to multi-part assignments—into tailored, prioritized plans and workflows that students can trust.
