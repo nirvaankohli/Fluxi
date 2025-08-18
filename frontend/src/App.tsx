@@ -92,18 +92,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100"> {/* Tailwind wrapper */}
-  
-      
-      <div
-        className="rounded-3xl bg-[#09173b] mx-auto mt-10 p-6 shadow-lg"
-        style={{
-          width: "min(120vw,max(70vw, 1600px))",
-          height: "45vh"
-        }}
-      >
-      </div>
-    </div>
+    
   );
 };
 
