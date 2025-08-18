@@ -34,22 +34,19 @@ const App: React.FC = () => {
 
   const items = [
     {
-      label: "Projects",
+      label: "Getting Started",
       bgColor: "#170D27",
       textColor: "#fff",
       links: [
-        { label: "Featured", ariaLabel: "Featured Projects", href: "/projects/featured" },
-        { label: "Case Studies", ariaLabel: "Project Case Studies", href: "/projects/case-studies" }
+        { label: "Sign Up", ariaLabel: "Sign Up", href: "/sign-up" }
       ]
     },
     {
-      label: "Contact",
+      label: "Why Us?",
       bgColor: "#271E37",
       textColor: "#fff",
       links: [
-        { label: "Email", ariaLabel: "Email us", href: "mailto:info@example.com" },
-        { label: "Twitter", ariaLabel: "Twitter", href: "https://twitter.com/yourhandle" },
-        { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://linkedin.com/company/yourcompany" }
+        { label: "What Makes Us Special", ariaLabel: "What Makes Us Special", href: "mailto:info@example.com" },
       ]
     },
 
@@ -58,8 +55,7 @@ const App: React.FC = () => {
       bgColor: "#0D0716",
       textColor: "#fff",
       links: [
-        { label: "Company", ariaLabel: "About Company", href: "/company" },
-        { label: "Careers", ariaLabel: "About Careers", href: "/careers" }
+        { label: "About Us", ariaLabel: "About Us", href: "/about" },
       ]
     }
   ];
