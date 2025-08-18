@@ -20,3 +20,7 @@
 
 - **Dynamic Adaptation**  
   The system adapts in real time: reprioritizing missed tasks, balancing workloads, and breathing flexibility into students' evolving schedules. It intellegently tailors to the student's google calender to decide when to execute these plans.
+
+- **Built-In Engagement Hooks**  
+  
+  Gamified progress, streak tracking, and interactive features keep motivation high and reinforce consistent study habits. However this is still a *maybe*.
