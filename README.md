@@ -14,3 +14,6 @@
 
 - **Unified Planning and Learning**  
   The app intelligently transforms varied inputs—from vague goals to multi-part assignments—into tailored, prioritized plans and workflows that students can trust.
+
+- **Guided Actionability**  
+  Each task unfolds as a clear, step-by-step journey: from planning to execution, with built-in study aids like auto-generated flashcards, quizzes, and reminders.
