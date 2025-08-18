@@ -95,8 +95,8 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100"> {/* Tailwind wrapper */}
-    <div className="flex justify-center items-center h-64">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
+    <div className="flex justify-center items-center">
 
       <PillNav
         logo={logo}
