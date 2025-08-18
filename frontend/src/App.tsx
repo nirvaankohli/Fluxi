@@ -93,58 +93,40 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100"> {/* Tailwind wrapper */}
-      <WelcomeContainer maxWidth="md">
-        <WelcomePaper elevation={3}>
-          <Box>
-            <Typography variant="h2" component="h1" gutterBottom>
-              Hi! ðŸ‘‹
-            </Typography>
-            <Typography variant="h4" component="h2" gutterBottom>
-              Welcome to Nirvaan&apos;s
-            </Typography>
-            <Typography variant="h3" component="h3" gutterBottom>
-              React + Flask Template
-            </Typography>
-            <Typography variant="h5" component="h4" sx={{ mt: 2 }}>
-              with MUI & Tailwind! ðŸš€
-            </Typography>
-
-            {/* Backend-powered greeting */}
-            <Typography
-              variant="h6"
-              component="p"
-              sx={{
-                mt: 4,
-                opacity: 0.95,
-                color: hasError ? "#ffcdd2" : "white",
-              }}
-            >
-              {isLoading
-                ? "Contacting backend..."
-                : apiMsg
-                ? `Backend says: "${apiMsg}"`
-                : "Backend connection failed"}
-            </Typography>
-
-            <Typography variant="body1" sx={{ mt: 3, opacity: 0.9 }}>
-              Your full-stack development journey starts here
-            </Typography>
-
-            {/* Connection status indicator */}
-            <Box sx={{ mt: 2 }}>
-              <Typography variant="caption" sx={{ opacity: 0.7 }}>
-                Backend Status:{" "}
-                {isLoading ? "ðŸŸ¡ Connecting..." : hasError ? "ðŸ”´ Offline" : "ðŸŸ¢ Connected"}
-              </Typography>
-            </Box>
-
-            {/* Tiny Tailwind badge */}
-            <div className="mt-6 inline-flex rounded-full border px-3 py-1 text-xs font-medium tracking-wider text-white/90 border-white/30">
-              Tailwind active
-            </div>
-          </Box>
-        </WelcomePaper>
-      </WelcomeContainer>
+      
+      <nav className="flex justify-center p-6">
+        <ul className="flex space-x-6 bg-gray-900 text-white px-6 py-2 rounded-full">
+          <li>
+            <a href="#" className="px-4 py-2 rounded-full hover:bg-gray-700 transition">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" className="px-4 py-2 rounded-full hover:bg-gray-700 transition">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#" className="px-4 py-2 rounded-full hover:bg-gray-700 transition">
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#" className="px-4 py-2 rounded-full hover:bg-gray-700 transition">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div
+        className="rounded-3xl bg-[#09173b]"
+        style={{
+          width: "min(120vw,max(70vw, 1600px))",
+          height: "45vh"
+        }}
+      >
+      </div>
     </div>
   );
 };
