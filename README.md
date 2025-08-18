@@ -30,3 +30,5 @@
   Over time, the app connects with calendars, note-taking platforms, and voice assistants—becoming the ultimate AI study companion across devices.
 
 ---
+
+## Why this vision works
