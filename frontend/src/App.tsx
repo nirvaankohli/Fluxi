@@ -34,15 +34,6 @@ const App: React.FC = () => {
 
   const items = [
     {
-      label: "About",
-      bgColor: "#0D0716",
-      textColor: "#fff",
-      links: [
-        { label: "Company", ariaLabel: "About Company", href: "/company" },
-        { label: "Careers", ariaLabel: "About Careers", href: "/careers" }
-      ]
-    },
-    {
       label: "Projects",
       bgColor: "#170D27",
       textColor: "#fff",
@@ -59,6 +50,16 @@ const App: React.FC = () => {
         { label: "Email", ariaLabel: "Email us", href: "mailto:info@example.com" },
         { label: "Twitter", ariaLabel: "Twitter", href: "https://twitter.com/yourhandle" },
         { label: "LinkedIn", ariaLabel: "LinkedIn", href: "https://linkedin.com/company/yourcompany" }
+      ]
+    },
+
+    {
+      label: "About",
+      bgColor: "#0D0716",
+      textColor: "#fff",
+      links: [
+        { label: "Company", ariaLabel: "About Company", href: "/company" },
+        { label: "Careers", ariaLabel: "About Careers", href: "/careers" }
       ]
     }
   ];
