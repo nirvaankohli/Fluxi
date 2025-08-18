@@ -39,3 +39,6 @@
 - **Real Yet Ambitious** – Balances feasible technological implementation with bold, long-term aspiration. 
 
 - **Differentiated** – Emphasizes the unique combination of AI-driven planning, adaptive workflows, and embedded study tools—setting it apart from generic to-do or note apps.
+
+---
+
