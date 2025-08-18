@@ -1,7 +1,7 @@
 ﻿import React, { useEffect, useState } from "react";
 import { Box, Typography, Paper, Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import PillNav from './components/Components/PillNav/PillNav'; 
+import CardNav from './components/Components/CardNav/CardNav'; 
 import logo from './assets/Subtract Logo2.svg';
 
 
@@ -29,6 +29,39 @@ interface ApiResponse {
 }
 
 const App: React.FC = () => {
+
+
+  const items = [
+      {
+        label: "About",
+        bgColor: "#0D0716",
+        textColor: "#fff",
+        links: [
+          { label: "Company", ariaLabel: "About Company" },
+          { label: "Careers", ariaLabel: "About Careers" }
+        ]
+      },
+      {
+        label: "Projects", 
+        bgColor: "#170D27",
+        textColor: "#fff",
+        links: [
+          { label: "Featured", ariaLabel: "Featured Projects" },
+          { label: "Case Studies", ariaLabel: "Project Case Studies" }
+        ]
+      },
+      {
+        label: "Contact",
+        bgColor: "#271E37", 
+        textColor: "#fff",
+        links: [
+          { label: "Email", ariaLabel: "Email us" },
+          { label: "Twitter", ariaLabel: "Twitter" },
+          { label: "LinkedIn", ariaLabel: "LinkedIn" }
+        ]
+      }
+    ];
+
   const [apiMsg, setApiMsg] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [hasError, setHasError] = useState<boolean>(false);
@@ -98,29 +131,19 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
     <div className="flex justify-center items-center">
 
-      <PillNav
-        logo={logo}
-        logoAlt="Company Logo"
-        items={[
-          { label: 'Home', href: '/' },
-          { label: 'Why Us?', href: '/about' },
-          { label: 'About', href: '/services' },
-          
-        ]}
-        activeHref="/"
-        className="scale-125"
-        ease="power1.inOut"
-        baseColor="#ffffff"
-        pillColor="#ffffff"
-        hoveredPillTextColor="#ffffff"
-        pillTextColor="#2962FF"
-        
-      />
+      
     </div>
 
-
-      
-
+      <CardNav
+      logo={logo}
+      logoAlt="Company Logo"
+      items={items}
+      baseColor="#fff"
+      menuColor="#000"
+      buttonBgColor="#111"
+      buttonTextColor="#fff"
+      ease="power3.out"
+    />
 
     </div>
   );
