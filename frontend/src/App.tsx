@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 import CardNav from './components/Components/CardNav/CardNav'; 
 import logo from './assets/Subtract Logo2.svg';
 import logotext from './assets/Fluxi Text BB.svg';
+import DotGridBackground from "./components/Background/DotGridBackground";
 
 
 const WelcomeContainer = styled(Container)(({ theme }) => ({
@@ -127,6 +128,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
+    
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
       <div className="flex justify-center items-center">
 
