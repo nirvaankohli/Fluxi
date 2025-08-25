@@ -2,6 +2,7 @@
 import { Box, Typography } from "@mui/material";
 import CardNav from './components/Components/CardNav/CardNav'; 
 import logotext from './assets/Fluxi Text BB.svg';
+import DotGridBackground from "./components/Background/DotGridBackground";
 import "./App.css";
 
 interface ApiResponse {
@@ -114,9 +115,11 @@ const App: React.FC = () => {
       minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
-      background: 'linear-gradient(to bottom, #f8fafc, #f1f5f9)',
-      position: 'relative'
+      position: 'relative',
+      overflow: 'hidden'
     }}>
+
+
       <CardNav
         logo={logotext}
         logoAlt="Fluxi"
@@ -137,7 +140,8 @@ const App: React.FC = () => {
         alignItems: 'center',
         position: 'relative',
         zIndex: 1,
-        marginTop: '80px' // Add space for the navbar
+        marginTop: '80px'
+        
       }}>
         <Box 
           sx={{
@@ -168,7 +172,20 @@ const App: React.FC = () => {
             </Typography>
           )}
         </Box>
+
+          
+      
+      
+
       </div>
+
+      <DotGridBackground 
+        dotColor="rgba(0, 0, 0, 0.15)"
+        dotSize={1}
+        dotSpacing={20}
+      />
+      
+      
     </div>
   );
 };
