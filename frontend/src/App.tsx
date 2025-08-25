@@ -1,28 +1,8 @@
 ﻿import React, { useEffect, useState } from "react";
-import { Box, Typography, Paper, Container } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { Box, Typography } from "@mui/material";
 import CardNav from './components/Components/CardNav/CardNav'; 
-import logo from './assets/Subtract Logo2.svg';
 import logotext from './assets/Fluxi Text BB.svg';
-import DotGridBackground from "./components/Background/DotGridBackground";
-
-
-const WelcomeContainer = styled(Container)(({ theme }) => ({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  minHeight: "100vh",
-  backgroundColor: theme.palette.background.default,
-}));
-
-const WelcomePaper = styled(Paper)(({ theme }) => ({
-  padding: theme.spacing(4),
-  textAlign: "center",
-  background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-  color: "white",
-  borderRadius: theme.spacing(2),
-  boxShadow: theme.shadows[10],
-}));
+import "./App.css";
 
 interface ApiResponse {
   message: string;
@@ -128,24 +108,66 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
-      <div className="flex justify-center items-center">
-
-      
-        <CardNav
+    <div style={{
+      width: '100%',
+      height: '100vh',
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      background: 'linear-gradient(to bottom, #f8fafc, #f1f5f9)',
+      position: 'relative'
+    }}>
+      <CardNav
         logo={logotext}
         logoAlt="Fluxi"
         items={items}
-        className=""
-
         baseColor="#fff"
         menuColor="#000"
         buttonBgColor="#111"
         buttonTextColor="#fff"
         ease="back.out(1.7)"
       />
-
+      
+      <div style={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'relative',
+        zIndex: 1,
+        marginTop: '80px' // Add space for the navbar
+      }}>
+        <Box 
+          sx={{
+            background: 'rgba(255, 255, 255, 0.8)',
+            backdropFilter: 'blur(10px)',
+            padding: 4,
+            borderRadius: 2,
+            boxShadow: 3,
+            maxWidth: '800px',
+            textAlign: 'center'
+          }}
+        >
+          <Typography variant="h3" component="h1" gutterBottom>
+            Welcome to Fluxi
+          </Typography>
+          
+          <Typography variant="h5" component="h2" sx={{ mb: 3 }}>
+            Your AI-powered student organizer
+          </Typography>
+          
+          <Typography variant="body1" paragraph>
+            {isLoading ? "Loading..." : apiMsg || "Transform chaos into clarity with personalized planning."}
+          </Typography>
+          
+          {hasError && (
+            <Typography color="error">
+              Could not connect to backend server. Please ensure it's running.
+            </Typography>
+          )}
+        </Box>
       </div>
     </div>
   );
