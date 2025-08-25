@@ -1,6 +1,7 @@
-﻿import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
-import CardNav from './components/Components/CardNav/CardNav'; 
+import CardNav from './components/Components/CardNav/CardNav';
+import Hero from './components/Hero/Hero';
 import logotext from './assets/Fluxi Text BB.svg';
 import DotGridBackground from "./components/Background/DotGridBackground";
 import "./App.css";
@@ -124,7 +125,7 @@ const App: React.FC = () => {
         logo={logotext}
         logoAlt="Fluxi"
         items={items}
-        baseColor="#fff"
+        baseColor="#F8F8F8"
         menuColor="#000"
         buttonBgColor="#111"
         buttonTextColor="#fff"
@@ -137,47 +138,17 @@ const App: React.FC = () => {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         position: 'relative',
         zIndex: 1,
-        marginTop: '80px'
-        
+        marginTop: '80px',
+        paddingLeft: '0'
+
       }}>
-        <Box 
-          sx={{
-            background: 'rgba(255, 255, 255, 0.8)',
-            backdropFilter: 'blur(10px)',
-            padding: 4,
-            borderRadius: 2,
-            boxShadow: 3,
-            maxWidth: '800px',
-            textAlign: 'center'
-          }}
-        >
-          <Typography variant="h3" component="h1" gutterBottom>
-            Welcome to Fluxi
-          </Typography>
-          
-          <Typography variant="h5" component="h2" sx={{ mb: 3 }}>
-            Your AI-powered student organizer
-          </Typography>
-          
-          <Typography variant="body1" paragraph>
-            {isLoading ? "Loading..." : apiMsg || "Transform chaos into clarity with personalized planning."}
-          </Typography>
-          
-          {hasError && (
-            <Typography color="error">
-              Could not connect to backend server. Please ensure it's running.
-            </Typography>
-          )}
-        </Box>
-
-          
-      
-      
-
+        <Hero />
       </div>
+
+      
 
       <DotGridBackground 
         dotColor="rgba(0, 0, 0, 0.15)"
@@ -191,4 +162,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
