@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
+import { Routes, Route } from "react-router-dom";
 import CardNav from './components/Components/CardNav/CardNav';
 import Hero from './components/Hero/Hero';
 import logotext from './assets/Fluxi Text BB.svg';
@@ -109,7 +110,9 @@ const App: React.FC = () => {
     fetchData();
   }, []);
 
-  return (
+  // Get current location for potential path-based UI changes if needed in the future
+
+  const HomePage = () => (
     <div style={{
       width: '100%',
       height: '100vh',
@@ -119,8 +122,6 @@ const App: React.FC = () => {
       position: 'relative',
       overflow: 'hidden'
     }}>
-
-
       <CardNav
         logo={logotext}
         logoAlt="Fluxi"
@@ -143,7 +144,6 @@ const App: React.FC = () => {
         zIndex: 1,
         marginTop: '80px',
         paddingLeft: '0'
-
       }}>
         <Hero />
 
@@ -161,19 +161,34 @@ const App: React.FC = () => {
             marginLeft: '50px',
           }}
         />
-
       </div>
-
-      
 
       <DotGridBackground 
         dotColor="rgba(0, 0, 0, 0.15)"
         dotSize={1}
         dotSpacing={20}
       />
-      
-      
     </div>
+  );
+
+  const AppPage = () => (
+    <div style={{
+      width: '100%',
+      height: '100vh',
+      backgroundColor: 'white',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
+    }}>
+      <h1>This is the App Page</h1>
+    </div>
+  );
+
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/app" element={<AppPage />} />
+    </Routes>
   );
 };
 
