@@ -146,6 +146,22 @@ const App: React.FC = () => {
 
       }}>
         <Hero />
+
+        <Box
+          sx={{
+            position: 'absolute',
+            right: '5%',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            width: 'calc(40%)',
+            aspectRatio: '15/9',
+            borderRadius: '16px',
+            border: '2px solid #444', 
+            backgroundColor: '#f0f0f0',
+            marginLeft: '50px',
+          }}
+        />
+
       </div>
 
       

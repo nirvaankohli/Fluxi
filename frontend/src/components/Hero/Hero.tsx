@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
           lineHeight: '1.3'
         }}
       >
-        One place where you can manage flash cards, assignments, studying, exams, time blocks and schedules.
+       With Fluxi, what once took years to learn can now be mastered in weeks—or even days. Study smarter, learn faster, achieve more.
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full">
@@ -40,8 +40,8 @@ const Hero: React.FC = () => {
             borderRadius: '20px',
             backgroundColor: '#2D2D2D',
             fontFamily: 'Inter, -apple-system, Roboto, Helvetica, sans-serif',
-            fontSize: 'clamp(1.25rem, 4vw, 1.875rem)',
-            fontWeight: 700,
+            fontSize: 'clamp(1rem, 4vw, 1.5rem)',
+            fontWeight: 400,
             color: 'rgba(255,255,255,1)',
             filter: 'drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25))'
           }}
@@ -55,12 +55,12 @@ const Hero: React.FC = () => {
             width: 'clamp(200px, 45vw, 220px)',
             height: 'clamp(60px, 12vw, 73px)',
             borderRadius: '20px',
-            background: 'rgba(217, 217, 217, 0.23)',
+            background: 'rgba(217, 217, 217, 0.13)',
             boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
-            backdropFilter: 'blur(2px)',
+            backdropFilter: 'blur(1px)',
             fontFamily: 'Inter, -apple-system, Roboto, Helvetica, sans-serif',
-            fontSize: 'clamp(1.25rem, 4vw, 1.875rem)',
-            fontWeight: 700,
+            fontSize: 'clamp(1.15rem, 4vw, 1.7rem)',
+            fontWeight: 400,
             color: 'rgba(0,0,0,1)'
           }}
         >
